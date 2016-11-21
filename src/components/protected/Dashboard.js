@@ -45,7 +45,7 @@ export default class Dashboard extends Component {
         <div className="row">
           <div className="col-sm-6 col-md-offset-3">
             <div className="col-sm-12">
-              <h3 className="text-center"> Todo List </h3>
+              <h3 className="text-center"> Let's do this! </h3>
               <AddItem add={this.handleAddItem.bind(this)}/>
               {this.state.loading === true ? <h3> LOADING... </h3> : <List items={this.state.list} remove={this.handleRemoveItem.bind(this)}/>}
             </div>
