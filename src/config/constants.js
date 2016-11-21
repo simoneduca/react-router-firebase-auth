@@ -1,12 +1,11 @@
-import firebase from 'firebase'
+import rebase from 're-base';
 
-const config = {
-  apiKey: "AIzaSyDHL6JFTyBcaV60WpE4yXfeO0aZbzA9Xbk",
-  authDomain: "practice-auth.firebaseapp.com",
-  databaseURL: "https://practice-auth.firebaseio.com",
-}
+export const config = rebase.createClass({
+  apiKey: "AIzaSyAC6eBAMyFUHeFyALtsDOZXQ55YLuFkzx8",
+  authDomain: "todolist-5ec65.firebaseapp.com",
+  databaseURL: "https://todolist-5ec65.firebaseio.com/",
+});
 
-firebase.initializeApp(config)
-
-export const ref = firebase.database().ref()
-export const firebaseAuth = firebase.auth
+//firebase.initializeApp(config)
+export const ref = config.database().ref()
+export const firebaseAuth = config.auth

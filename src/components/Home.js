@@ -4,7 +4,7 @@ export default class Home extends Component {
   render () {
     return (
       <div>
-        Home. Not Protected. Anyone can see this.
+        Moving is fun. When you have a list like this.
       </div>
     )
   }
