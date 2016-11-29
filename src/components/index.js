@@ -60,11 +60,11 @@ export default class App extends Component {
             <nav className="navbar navbar-default navbar-static-top">
               <div className="container">
                 <div className="navbar-header">
-                  <Link to="/" className="navbar-brand">Simple Todo List</Link>
+                  <Link to="/todolist" className="navbar-brand">Simple Todo List</Link>
                 </div>
                 <ul className="nav navbar-nav pull-right">
                   <li>
-                    <Link to="/" className="navbar-brand">Home</Link>
+                    <Link to="/todolist" className="navbar-brand">Home</Link>
                   </li>
                   <li>
                     <Link to="/dashboard" className="navbar-brand">Dashboard</Link>
@@ -76,7 +76,7 @@ export default class App extends Component {
                           onClick={() => {
                             logout()
                             this.setState({authed: false})
-                            router.transitionTo('/')
+                            router.transitionTo('/todolist')
                           }}
                           className="navbar-brand">Logout</button>
                       : <span>
@@ -89,7 +89,7 @@ export default class App extends Component {
             </nav>
             <div className="container">
               <div className="row">
-                <Match pattern='/' exactly component={Home} />
+                <Match pattern='/todolist' exactly component={Home} />
                 <MatchWhenUnauthed authed={this.state.authed} pattern='/login' component={Login} />
                 <MatchWhenUnauthed authed={this.state.authed} pattern='/register' component={Register} />
                 <MatchWhenAuthed authed={this.state.authed} pattern='/dashboard' component={Dashboard} />
