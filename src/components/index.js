@@ -25,7 +25,7 @@ function MatchWhenUnauthed ({component: Component, authed, ...rest}) {
       {...rest}
       render={(props) => authed === false
         ? <Component {...props} />
-        : <Redirect to='/dashboard' />}
+        : <Redirect to={{pathname: '/dashboard', state: {from: props.location}}} />}
     />
   )
 }
